@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css';
 import { Switch, Link, Route } from 'react-router-dom';
 import { Layout, Typography, space } from 'antd';
 
@@ -8,9 +9,8 @@ import {
   News,
   Cryptocurrencies,
   CryptoDetails,
+  Homepage,
 } from './components';
-A;
-import './App.css';
 
 function app() {
   return (
