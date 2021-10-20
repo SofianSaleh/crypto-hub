@@ -1,10 +1,14 @@
 import React from 'react'
+import millify from 'millify'
+import {Typography, Col, Row, Statistic} from 'antd'
+import { Link } from 'react-router-dom'
+import { Title} from 'Typography'
 
 const Homepage = () => {
     return (
-        <div>
-            <h1>Home Page</h1>
-        </div>
+        <>
+        <Title level={2 } className="heading"></Title>
+        </>
     )
 }
 
