@@ -26,13 +26,13 @@ const Cryptocurrencies = ({simplified}) => {
                 <Input placeholder="Search Crypto Currency" onChange={(e)=>setSearchTerm(e.target.value)}/>
             </div>
                 )}
-            <Row gutter={32, 32,32,32} className="crypto-card-container">
+            <Row gutter={32 ,32} className="crypto-card-container">
                 {cryptos?.map((currency )=>(
                     <Col xs={24} sm={12} lg={6} className='crypto-card' key={currency.id}>
                         <Link to ={`/crypto/${currency.id}`}>
                             <Card 
                                 title={`${currency.rank}. ${currency.name}`} 
-                                extra={<img className="crypto-image" src={`currency.iconUrl`}/>}
+                                extra={<img className="crypto-image" src={`currency.iconUrl`} alt={`${currency.name}`}/>}
                                 hoverable
                                 >
                                     <p>Price: {millify(currency.price)}</p> 
