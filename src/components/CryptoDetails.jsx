@@ -6,6 +6,7 @@ import {Col, Row, Typogrophy, Select} from'antd'
 import { MoneyCollectOutlined, DollarCircleOutlined, FundOutlined, ExclamationCircleOutlined, StopOutlined, TrophyOutlined, CheckOutlined, NumberOutlined, ThunderboltOutlined } from '@ant-design/icons';
 
 import { useGetCryptoDetailQuery } from '../services/cryptoApi'
+import LineChart from './LineChart'
 
 const {Title, Text} = Typogrophy
 const {Option} = Select
@@ -54,6 +55,7 @@ const CryptoDetails = () => {
                 {time.map((date)=><Option key={date}>{date}</Option>)}
             </Select>
             {/*  Line chart  */}
+            <LineChart coinHistory={coinHistory} currentPrice={millify(cryptoDetails.price} coinName={cryptoDetails.name}/>
             <Col className ='stat-container'>
 
                 <Col className='coin-value-statistics'>
