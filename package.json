@@ -1,7 +1,10 @@
 {
-  "name": "crypto-app",
+  "name": "crypto-hub",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "author": "Sofian Saleh",
+  "email" : "sofiane.saleh11@gmail.com",
+  "license" : "MIT",
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
     "@reduxjs/toolkit": "^1.6.2",
