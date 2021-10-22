@@ -27,9 +27,12 @@ if(isFetching) return <Loader />
         <Row>
           {exchangesList?.map((exchange,i) => (
             <Col span={24} key={i}>
-              <Collapse>
+              <Collapse
+                ghostbordered={false}
+              >
                 <Panel
                   key={exchange.id}
+                  showArrow={false}
                   header={(
                     <Row key={exchange.id}>
                       <Col span={6}>
@@ -39,11 +42,11 @@ if(isFetching) return <Loader />
                       </Col>
                       <Col span={6}>{millify(exchange.volume)}</Col>
                       <Col span={6}>{millify(exchange.numberOfMarkets)}</Col>
-                      <Col span={6}>{millify(exchange.marketShare)}</Col>
+                      <Col span={6}>{millify(exchange.marketShare)}%</Col>
                     </Row>
                   )}
                 >
-                  {HTMLReactParser(exchange.description)}
+                  {HTMLReactParser(exchange.description || '')}
                 </Panel>
               </Collapse>
             </Col>
