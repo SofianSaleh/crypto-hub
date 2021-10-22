@@ -1,7 +1,7 @@
 {
   "name": "crypto-hub",
   "version": "0.1.0",
-  "private": false,
+  "private": true,
   "author": "Sofian Saleh",
   "email" : "sofiane.saleh11@gmail.com",
   "license" : "MIT",
