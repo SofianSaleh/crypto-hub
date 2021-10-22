@@ -37,7 +37,7 @@ const Navbar = () => {
                     <MenuOutlined />
 
                 </Button>
-                {activeMenu && (
+                {!activeMenu && (
 
                     <Menu theme='dark'>
                     <Menu.Item icon={<HomeOutlined/>}key={1}>
