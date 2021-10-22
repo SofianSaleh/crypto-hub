@@ -2,20 +2,20 @@ import React, {useState} from 'react'
 import HTMLReactParser from 'html-react-parser'
 import {userParams } from "react-router-dom"
 import millify from 'millify'
-import {Col, Row, Typogrophy, Select} from'antd'
+import {Col, Row, Typography, Select} from'antd'
 import { MoneyCollectOutlined, DollarCircleOutlined, FundOutlined, ExclamationCircleOutlined, StopOutlined, TrophyOutlined, CheckOutlined, NumberOutlined, ThunderboltOutlined } from '@ant-design/icons';
 
-import { useGetCryptoDetailQuery, useGetCryptoHistoryQuery,
+import { useGetCryptoDetailsQuery, useGetCryptoHistoryQuery,
  } from '../services/cryptoApi'
 import LineChart from './LineChart'
 
-const {Title, Text} = Typogrophy
+const {Title, Text} = Typography
 const {Option} = Select
 
 const CryptoDetails = () => {
-    const {coinId} = useParams
+    const {coinId} = userParams
     const [timePeriod, setTimePeriod] = useState('7d')
-    const { data, isFetching } = useGetCryptoDetailQuery(coinId)
+    const { data, isFetching } = useGetCryptoDetailsQuery(coinId)
     const { data: coinHistory } = useGetCryptoHistoryQuery({coinId, timePeriod})
     const cryptoDetails = cryptoDetails?.data?.coin
 
