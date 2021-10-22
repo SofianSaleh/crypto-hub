@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import HTMLReactParser from 'html-react-parser'
-import {userParams } from "react-router-dom"
+import {useParams } from "react-router-dom"
 import millify from 'millify'
 import {Col, Row, Typography, Select} from'antd'
 import { MoneyCollectOutlined, DollarCircleOutlined, FundOutlined, ExclamationCircleOutlined, StopOutlined, TrophyOutlined, CheckOutlined, NumberOutlined, ThunderboltOutlined } from '@ant-design/icons';
@@ -13,12 +13,12 @@ const {Title, Text} = Typography
 const {Option} = Select
 
 const CryptoDetails = () => {
-    const {coinId} = userParams
+    const {coinId} = useParams()
     const [timePeriod, setTimePeriod] = useState('7d')
     const { data, isFetching } = useGetCryptoDetailsQuery(coinId)
     const { data: coinHistory } = useGetCryptoHistoryQuery({coinId, timePeriod})
-    const cryptoDetails = cryptoDetails?.data?.coin
-
+    const cryptoDetails = data?.data?.coin;
+    console.log(coinId, cryptoDetails)
     if(isFetching) return `Loading...`
 
     const time = ['3h', '24h', '7d', '30d', '1y', '3m', '3y', '5y'];
@@ -99,8 +99,8 @@ const CryptoDetails = () => {
                 <Row className="coin-desc">
                     <Title level={3} className='coin-details-heading'>
                         What is {cryptoDetails.name}?
-                        {HTMLReactParser(cryptoDetails.descritpion)}
                     </Title>
+                        {HTMLReactParser(cryptoDetails.description)}
                 </Row>
                 <Col className="coin-links">
                     <Title level={3}className='coin-details-heading'>{cryptoDetails.name} Links</Title>

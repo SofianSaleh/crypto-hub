@@ -5,7 +5,7 @@ import { Col, Row, Typography } from 'antd';
 const { Title } = Typography;
 
 
-const LineChart = ({coinHistory, timePeriod, coinName}) => {
+const LineChart = ({coinHistory, currentPrice , coinName}) => {
     return (
         <>
         <Row className='chart-header'>
