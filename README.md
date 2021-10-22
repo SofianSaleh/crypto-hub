@@ -16,4 +16,4 @@ Please make sure to update tests as appropriate.
 
 ## Live Demo
 
-Coming Soon !!!#Crypto-Hub
+[Live Demo!](https://cryptos-hub.netlify.app/)
