@@ -60,7 +60,7 @@ const CryptoDetails = () => {
             >
                 {time.map((date)=><Option key={date}>{date}</Option>)}
             </Select>
-            {/*  Line chart  */}
+           
             <LineChart coinHistory={coinHistory} currentPrice={millify(cryptoDetails.price)} coinName={cryptoDetails.name}/>
             <Col className ='stat-container'>
 
