@@ -31,7 +31,7 @@ if(isFetching) return <Loader />
                 ghostbordered={false}
               >
                 <Panel
-                  key={exchange.id}
+                 
                   showArrow={false}
                   header={(
                     <Row key={exchange.id}>
